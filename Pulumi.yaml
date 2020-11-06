@@ -1,0 +1,13 @@
+name: iac_intro_w_pulumi
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: This project is used to introduce IaC with Pulumi,especially for tests
+template:
+  config:
+    gcp:project:
+      description: Please revise it based on your deployment target
+    gcp:zone:
+      description: Locate the deployment within TW
+      default: asia-east1-a
