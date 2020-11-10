@@ -1,11 +1,12 @@
 # Start your first Pulumi with tests
 
 This project includes a basic webserver hosted by ngnix with GCP!
-<pre>
-Instance type: e2-small
-Region       : asia-east1
-network      : premium
-</pre>
+
+| resource type | value      |
+| ------------- | ---------- |
+| Instance type | e2-small   |
+| Region        | asia-east1 |
+| network       | standard   |
 
 This project will leverage the above context to provide the examples for unit tests and property tests.
 It introduces a tiny tool called [testinfra](https://testinfra.readthedocs.io/). Based on this tool, we could make some convenient tools for us to check the infrastructure.
