@@ -44,7 +44,7 @@ Enjoy it!
 4.  Try the unit tests!
 
     ```
-    $pytest -s --disable-pytest-warnings
+    $pytest -s --disable-pytest-warnings tests/*
     ```
 
 5.  Run `pulumi up --policy-pack policy_tests` to preview and deploy changes:
