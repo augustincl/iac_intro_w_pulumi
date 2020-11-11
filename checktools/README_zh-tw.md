@@ -1,6 +1,7 @@
-### 專案箝制
+### 專案前置
 
 ```bash
+$cd [PROJECT_ROOT]
 $source venv/bin/activate
 ```
 
@@ -14,7 +15,7 @@ $source venv/bin/activate
 
 ### 步驟
 
-1. 請參閱本專案的主要 README 在 GCP 上建立網路資源
+1. 請參閱本專案的主要 README 在 GCP 上建立網路資源，並且將所在資料夾切換到 checktools 資料夾
 
 2. 產生 sshkey
 
@@ -27,15 +28,14 @@ $ssh-keygen -t rsa -f [name-of-keyfile] -C [your-name-in-this-project]
 1. 設定產生的公鑰
 
 <pre>
-  i. 將產生的公私鑰，移動到本資料夾
- ii. 開啟 GCP 的 VM 資源頁面，並且選取方才建立的虛擬實體
-iii. 點擊 'Edit'
- iv. 往下滾動網頁至 ssh 相關的設定
-  v. 將公鑰(cat *.pub) 內容複製，並且填入欄位，進行新增
- vi. 點擊 'Save'
+  i. 開啟 GCP 的 VM 資源頁面，並且選取方才建立的虛擬實體
+ ii. 點擊 'Edit'
+iii. 往下滾動網頁至 ssh 相關的設定
+ iv. 將公鑰([name-of-keyfile].pub) 內容複製，並且填入欄位，進行新增
+  v. 點擊 'Save'
 </pre>
 
-1. 執行 `pytest --ssh-identity-file=./[your-keyfile] --hosts='ssh://[your-name-in-this-project]@external_instance_ip' test_created_instance.py`
+1. 執行 `pytest --ssh-identity-file=./[name-of-keyfile] --hosts='ssh://[your-name-in-this-project]@external_instance_ip' test_created_instance.py`
 
 ## 操作範例二
 
@@ -45,9 +45,11 @@ iii. 點擊 'Edit'
 
 ### 步驟
 
-1. 執行 `docker run -dit --name trynginx nginx:stable`
+1. 執行 `cd PROJECT_ROOT`
 
-2. 執行 `pytest -s --hosts='docker://trynginx' checktools/test_created_instance.py`
+2. 執行 `docker run -dit --name trynginx nginx:stable`
+
+3. 執行 `pytest -s --hosts='docker://trynginx' checktools/test_created_instance.py`
 
 
 
