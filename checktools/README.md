@@ -1,6 +1,7 @@
 ### Prerequisite
 
 ```bash
+$cd [PROJECT_ROOT]
 $source venv/bin/activate
 ```
 
@@ -14,7 +15,7 @@ We will use the real deployment on the cloud as the backend to use the checktool
 
 ### Usage
 
-1. Please refer to README of this project to create your own webserver on GCP
+1. Please refer to README of this project to create your own webserver on GCP and change your folder to **checktools**
 
 2. generate your sshkey
 
@@ -27,14 +28,14 @@ $ssh-keygen -t rsa -f [name-of-keyfile] -C [your-name-in-this-project]
 3. setup your sshkey
 
 <pre>
-i. move your keys to checktools folder
-ii. open GCP console and enter the page of the target vm instance
-iii. press 'Edit'
-iv. scroll your page and find ssh option
-v. add your public key
+  i. open GCP console and enter the page of the target vm instance
+ ii. press 'Edit'
+iii. scroll your page and find ssh option
+ iv. add your public key(the content of [name-of-keyfile.pub])
+  v. press 'Save' to take the change effective
 </pre>
 
-4. run `pytest --ssh-identity-file=./[your-keyfile] --hosts='ssh://[your-name-in-this-project]@external_instance_ip' test_created_instance.py`
+4. run `pytest --ssh-identity-file=./[name-of-keyfile] --hosts='ssh://[your-name-in-this-project]@external_instance_ip' test_created_instance.py`
 
 ## Scenario 2
 
@@ -44,9 +45,11 @@ This scenario will not leverage any cloud resource. We just use the local runnin
 
 ### Usage
 
-1. run `docker run -dit --name trynginx nginx:stable`
+1. run `cd PROJECT_ROOT`
 
-2. run `pytest -s --hosts='docker://trynginx' checktools/test_created_instance.py`
+2. run `docker run -dit --name trynginx nginx:stable`
+
+3. run `pytest -s --hosts='docker://trynginx' checktools/test_created_instance.py`
 
 
 
