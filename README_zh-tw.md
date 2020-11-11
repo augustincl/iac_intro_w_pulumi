@@ -1,4 +1,4 @@
-# Start your first Pulumi with tests
+# 開始你的第一個 Pulumi 程式，並且為它撰寫測試案例! 
 
 本專案將透過 GCP 提供採用 ngnix 所架設的簡單網頁伺服器!
 | 項目     | 設定       |
