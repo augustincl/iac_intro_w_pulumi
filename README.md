@@ -16,12 +16,22 @@ Enjoy it!
 ## Prerequisite
 
 * This project leverages GCP. Please setup your [gcloud SDK](https://cloud.google.com/sdk/docs/install#deb)
-* Python 3.7+
+* You should leverage gcloud command to setup your application token
+* Python **3.7+**. :warning: DO NOT USE VERSION 2.x
 * [Pulumi](https://www.pulumi.com/docs/get-started/install/)
+
+:mega: 
+1. All the commands are based on **LINUX**
+2. If you are a Windows user, please note that you might need to adjust some instructions!
+3. Please refer to the official site for gcloud and pulumi for more details about the installation
+4. Please leverage Anaconda to setup your python environment.
 
 ## Running the App
 
 1. Download and initialize your environment
+
+:warning: 
+For Windows users, please leverage Anaconda to create your virtual environment. Then, use command to install requirements.txt
 
     ```bash
     $ python3 -m venv venv
