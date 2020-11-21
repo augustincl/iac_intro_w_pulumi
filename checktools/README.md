@@ -5,6 +5,11 @@ $cd [PROJECT_ROOT]
 $source venv/bin/activate
 ```
 
+:mega:
+1. All the commands are based on **LINUX**
+2. If you are a Windows user, please note that you might need to adjust some instructions!
+3. For Windows users, please leverage Anaconda to create your virtual environment.
+
 ## Scenario 1
 
 ### Description

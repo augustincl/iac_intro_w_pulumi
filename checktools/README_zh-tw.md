@@ -1,5 +1,10 @@
 ### 專案前置
 
+:mega: 
+1. 本專案所有操作都是基於 **LINUX**。
+2. 如果是 Windows 的使用者，一些操作指令可能不適用! 請稍加調適。
+3. Windows 使用者請利用 Anaconda 建立虛擬環境。
+
 ```bash
 $cd [PROJECT_ROOT]
 $source venv/bin/activate

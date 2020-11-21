@@ -14,12 +14,19 @@
 ## 專案前置
 
 * 此專案是基於 Google 的雲端服務，為了完成整個佈署，請安裝 [gcloud SDK](https://cloud.google.com/sdk/docs/install#deb)
-* Python 3.7+
+* Python 3.7+ :warning: 請勿安裝2.x的版本
 * [Pulumi](https://www.pulumi.com/docs/get-started/install/)
+
+:mega: 
+1. 本專案所有操作都是基於 **LINUX**。
+2. 如果是 Windows 的使用者，一些操作指令可能不適用! 請稍加調適。
+3. gcloud與pulumi的設置請參考官網，而Python則請用anaconda建立執行環境
 
 ## 執行此專案
 
 1. 下載並且初始你的環境
+
+:warning: Windows 使用者請利用 Anaconda 建立虛擬環境，再利用指令安裝 requirements.txt 即可!
 
     ```bash
     $ python3 -m venv venv
